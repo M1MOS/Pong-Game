@@ -116,11 +116,11 @@ function refreshUpdate() {
 
     //update le Score
     if (ball.x - ball.radius < 0) {
-        // Le bot Win
+        // Le bot Win score ++
         bot.score++;
         resetBall();
     } else if (ball.x + ball.radius > canvas.width) {
-        // Le joueur marque
+        // Le joueur marque score ++
         joueur.score++;
         resetBall();
     }
