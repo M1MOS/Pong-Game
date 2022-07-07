@@ -9,7 +9,7 @@ const joueur = {
     y : canvas.height / 2 - 100 / 2,
     width : 10,
     height : 100,
-    color : "WHITE",
+    color : "RED",
     score : 0,
 };
 
@@ -19,7 +19,7 @@ const bot = {
     width: 10,
     height: 100,
     score: 0,
-    color: "WHITE",
+    color: "BLUE",
 };
 
 //Création de la Balle
@@ -31,7 +31,7 @@ const ball = {
     speed : 7,
     velocityX : 5,
     velocityY : 5,
-    color : "WHITE",
+    color : "YELLOW",
 }
 
 // Function du Rectangle
@@ -46,7 +46,7 @@ const net = {
     y: 0,
     width: 2,
     height: 10,
-    color: "WHITE",
+    color: "GREEN",
 }
 
 function drawNet() {
@@ -162,13 +162,14 @@ function refreshUpdate() {
 function renduMatch() {
     // Clear
     drawRect(0, 0, canvas.width, canvas.height, "BLACK");
-
+    
+    // Draw score
+    drawText(joueur.score, canvas.width / 4, canvas.height / 5, "WHITE")
+    drawText(bot.score, 3 * canvas.width / 4, canvas.height / 5, "WHITE")
+    
     // the Net
     drawNet()
 
-    // Draw score
-    drawText(joueur.score, canvas.width / 4, canvas.height / 5, "WHITE")
-    drawText(joueur.score, 3 * canvas.width / 4, canvas.height / 5, "WHITE")
 
     //Joueur VS COM
     drawRect(joueur.x, joueur.y, joueur.width, joueur.height, joueur.color);

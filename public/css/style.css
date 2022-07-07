@@ -1,0 +1,11 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+body canvas {
+  margin-top: 250px;
+  margin-left: 400px;
+  background-image: url("../image/bg.jpg");
+}
+
+/*# sourceMappingURL=style.css.map */
